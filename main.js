@@ -119,3 +119,17 @@ function create_gallery (photos) {
     };
 };
 create_gallery(gallery_photos);
+
+function copyToClipBoard(element) {
+    $(element).removeClass('copied');
+
+    var $temp = $("<input>");
+    $("body").append($temp);
+
+    var content = $(element).text();
+    $temp.val(content).select();
+    document.execCommand("copy");
+    $temp.remove();
+
+    $(element).addClass('copied');
+};

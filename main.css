@@ -1,11 +1,20 @@
+@font-face {
+	font-family: "Amalfi Coast";
+    src: url("./fonts/AmalfiCoast.ttf") /* chrome firefox opera Safari, Android, iOS 4.2+*/
+}
+@font-face {
+	font-family: "Royal Vogue";
+    src: url("./fonts/RoyalVogue.ttf") /* chrome firefox opera Safari, Android, iOS 4.2+*/
+}
+
 html {
 	box-sizing: border-box;
 	-ms-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%; 
 	margin:0;
 	padding:0;
-	font-family: 'Akkurat', -apple-system, BlinkMacSystemFont, Helvetica, sans-serif;
-	font-size:18px;
+	font-family: 'Royal Vogue', -apple-system, BlinkMacSystemFont, Helvetica, sans-serif;
+	font-size:16px;
 	font-weight:200;
 	width:100%;
 	min-height:100%;
@@ -20,7 +29,9 @@ html {
 input, 
 label,
 a,
-header {
+header,
+.modal,
+.instructions {
 	-webkit-transition: all 0.2s ease-in-out;
 	-moz-transition:    all 0.2s ease-in-out;
 	-ms-transition:     all 0.2s ease-in-out;
@@ -57,11 +68,15 @@ button {
 }
 a:hover,
 button:hover {
-	color: #64d488
+	color: #64d488;
+	color: rgba(234,185,96,1);
 }
 a:active,
 button:active {
 	color: #1d2a36;
+}
+a {
+	text-decoration: underline;
 }
 h1 span,
 h2 span,
@@ -81,14 +96,19 @@ header {
 	align-items: center;
 	position: fixed;
 	width: 100%;
+	z-index: 1;
 }
 header.filledHeader {
 	background-color: #fff;
 	border-bottom: 1px solid rgba(0,0,0,.15);
 }
+header span {
+	font-family: 'Amalfi Coast', serif;
+}
 header a {
 	flex-grow: 1;
 	line-height: 0;
+	text-decoration: none;
 }
 header > div,
 header > button {
@@ -122,13 +142,13 @@ section:first-of-type {
     background-position: center;
 }
 section:nth-of-type(2) {
-	background-color: rgba(215,150,124,.15);
+	/*background-color: rgba(215,150,124,.15);*/
 }
 section:nth-of-type(3) {
-	background-color: rgba(217,182,163,.15);
+	/*background-color: rgba(217,182,163,.15);*/
 }
 section:nth-of-type(4) {
-	background-color: rgba(178,109,107,.15);
+	/*background-color: rgba(178,109,107,.15);*/
 }
 section .container {
 	max-width: 1000px;
@@ -143,11 +163,12 @@ h3 {
 	font-weight:300;
 	width: 100%;
 	margin: 0 0 1em;
+	font-family: 'Amalfi Coast', serif;
 }
 h1 {
 	font-size:2.5em;
 	text-align: right;
-    padding-top: 2em;
+    padding-top: 4rem;
     padding-right: 1rem;
 }
 h2 {
@@ -170,17 +191,36 @@ nav a.current {
 	border-bottom: 1px solid;
 }
 
+.circle {
+	display: none;
+	border: 2px solid;
+	border-radius: 50%;
+	width: 1.5em;
+    height: 1.5em;
+    line-height: 1.25em;
+    font-weight: 500;
+}
 
+#details {
+	background-image: url(./images/WineStain.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position-x: 110%;
+	background-position-y: 80%;
+}
 #details .container,
+#activities .container,
 #lodging .container,
 #registry .container {
 	display: flex;
 	justify-content: space-evenly;
 }
-#details .container {
+#details .container,
+#activities .container {
 	justify-content: space-between;
 }
-#details .container > div {
+#details .container > div,
+#activities .container > div {
 	margin-bottom: 2rem;
 }
 .container p {
@@ -197,18 +237,48 @@ nav a.current {
 #details p {
 	margin-bottom: 0;
 }
-#details .map {
+#details div > a {
+	display: flex;
+	align-items: center;
+	margin-top: 1rem;
+}
+#details div > a img {
+	height: 1em;
+	margin-right: .5rem;
+}
+.map {
 	width:  100%;
-	margin-bottom: 2rem;
+	/*margin-bottom: 2rem;*/
 }
 
-#attire {
-	display: flex;
+.modal {
+	position: fixed;
+	left: 50%;
+    transform: translate(-50%, 0);
+    bottom: -50%;
+	width: 100%;
+	max-width: 600px;
 	margin: 0 auto !important;
+	background: rgba(255,255,255,90%);
+	text-align: center;
+	padding: 3rem;
+	border-radius: 1rem;
+	box-shadow: 0px 0px 5em 0px rgb(0 0 0 / 10%);
+}
+.modal.show {
+	bottom: 50%;
+}
+.modal .close {
+	display: block;
+    margin: 0 0 0 auto;
+    padding: 1em;
+    width: 3rem;
+    background-color: transparent	;
 }
 #attire img {
 	height:  3rem;
-	margin-right: 1rem;
+	display: block;
+	margin: 0 auto 1em;
 }
 #attire div * {
 	margin: 0;
@@ -218,10 +288,10 @@ nav a.current {
 #registry h2 {
 	margin-bottom: .25rem;
 }
-#lodging p {
+#lodging .container > p {
 	padding-right: 25%;
 }
-#lodging a,
+#lodging .container > div,
 #registry a {
 	padding: 1rem;
 	border-radius: 1rem;
@@ -231,22 +301,54 @@ nav a.current {
 	height: 14rem;
 	display: block;
 }
+#lodging .container > div {
+	width: 42.5%;
+	margin-right: 7.5%;
+	position: relative;
+    overflow: hidden;
+}
+#lodging .circle {
+	position: absolute;
+    right: 1em;
+}
+#lodging .instructions {
+	text-align: left;
+	position: absolute;
+	left: 0;
+    padding: 1em;
+    top: 75%;
+}
+#lodging .container > div:hover .instructions,
+#lodging .container > div.show .instructions {
+	top: 25%;
+	background-color: rgba(255,255,255,.9);
+}
 #registry a {
 	width: 85%;
 }
-#lodging a:hover,
+#lodging .container > div:hover,
+#lodging .container > div.show,
 #registry a:hover {
 	box-shadow: 0 0 13px 0 #e0e0e0;
 }
-#lodging a:first-of-type,
+#lodging .container > div:first-of-type,
 #registry a:first-of-type {
 	margin-bottom: 1rem;
 }
-#lodging a:last-of-type {
+#lodging .container > div:last-of-type {
 	background-color: rgb(0,0,2);
 	color: #fff;
 }
-#lodging a img,
+#lodging .container > div:last-of-type .instructions {
+	background-color: rgba(0,0,2,.9);
+}
+#lodging .container > div:last-of-type .instructions a {
+	color: #fff;
+}
+#lodging .container > div:last-of-type .instructions a:hover {
+	color: rgba(234,185,96,1);
+}
+#lodging .container > div img,
 #registry a img {
 	height: 10rem;
 }
@@ -280,8 +382,25 @@ footer {
 	height: auto;
 }
 
+.copied {
+	position: relative;
+}
+.copied:before {
+    content: 'Copied';
+    display: inline-block;
+    font-size: .5em;
+    position: absolute;
+    top: -85%;
+    border-radius: .5em;
+    background-color: #fff;
+    padding: .5em;
+    color: #000;
+    opacity: 0;
+    animation: fade 2s linear;
+}
+
 footer {
-	background-color: rgba(220,163,106,1);
+	/*background-color: rgba(220,163,106,1);*/
 	display: flex;
 	justify-content: end;
 }
@@ -291,7 +410,7 @@ footer img {
 
 @media only screen and (max-width: 700px) {
 	html {
-		font-size:16px;
+		font-size:14px;
 		align-items: flex-start;
 	}
 	body {
@@ -303,6 +422,8 @@ footer img {
 	}
 	h1 {
 		padding-right: 0;
+		line-height: 2em;
+		font-size: 2.25em;
 	}
 
 	section:first-of-type {
@@ -312,11 +433,28 @@ footer img {
 		padding:  2rem 0;
 	}
 
+	.modal {
+		border-radius: 0;
+	}
+	.modal.show {
+		bottom: 0%;
+	}
+
+	.circle {
+		display: inline-block;
+	}
+
+	#details {
+		background-position-x: 17rem;
+	}
 	#details div,
-	#lodging a {
+	#lodging .container > div {
 		width: 100%;
 	}
-	#lodging p {
+	#lodging .container > div {
+		margin-right: 0;
+	}
+	#lodging .container > p {
 		padding-right: 0;
 	}
 
@@ -350,6 +488,9 @@ footer img {
 	}
 }
 
-
+@keyframes fade {
+  0%,100% { opacity: 0 }
+  50% { opacity: 1 }
+}
 
 
