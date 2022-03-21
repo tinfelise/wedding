@@ -120,7 +120,11 @@ function create_gallery (photos) {
         } else {
             var html = '<img src="' + url + '" alt="' + photo.text + '">';
         };
-        html = '<div>' + html + '<div>' + photo.text + '</div></div>';
+        html = '<div>' + html;
+        if (photo.text) {
+            html = html + '<div>' + photo.text + '</div>';
+        };
+        html = html + '</div>'
         $('#gallery').append(html);
     };
 };
