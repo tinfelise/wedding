@@ -103,6 +103,10 @@ var gallery_photos = [
     }
 ];
 
+function addCode(element,code) {
+    $(element).text(code);
+};
+
 function create_gallery (photos) {
     for (item in photos) {
         var photo = photos[item];
@@ -110,15 +114,16 @@ function create_gallery (photos) {
         if (photo.type == 'video') {
             var html = '<video autoplay muted loop playsinline>';
                 html += '<source src="' + url + '" type="video/mp4">';
+                html += photo.text;
                 html += '</video>';
                 // html = '<video autoplay muted loop><source src="https://belong-consumer-assets.s3.us-west-1.amazonaws.com/belong-explainer-video/belong_explainer.mp4" type="video/mp4"></video>';
         } else {
             var html = '<img src="' + url + '" alt="' + photo.text + '">';
         };
+        html = '<div>' + html + '<div>' + photo.text + '</div></div>';
         $('#gallery').append(html);
     };
 };
-create_gallery(gallery_photos);
 
 function copyToClipBoard(element) {
     $(element).removeClass('copied');
@@ -133,3 +138,7 @@ function copyToClipBoard(element) {
 
     $(element).addClass('copied');
 };
+
+addCode('#UpValley_code','WAHR & INFELISE WEDDING');
+addCode('#MountView_code span','AT722');
+create_gallery(gallery_photos);

@@ -31,7 +31,8 @@ label,
 a,
 header,
 .modal,
-.instructions {
+.instructions,
+#gallery * {
 	-webkit-transition: all 0.2s ease-in-out;
 	-moz-transition:    all 0.2s ease-in-out;
 	-ms-transition:     all 0.2s ease-in-out;
@@ -168,7 +169,7 @@ h3 {
 h1 {
 	font-size:2.5em;
 	text-align: right;
-    padding-top: 4rem;
+    padding-top: 3rem;
     padding-right: 1rem;
 }
 h2 {
@@ -360,13 +361,6 @@ nav a.current {
 footer {
 	padding: 0 !important;
 }
-/*#gallery div {
-	height: 500px;
-	width:  100%;
-	background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}*/
 #gallery {
 	line-height: 0;
 	-webkit-column-count: 4;
@@ -376,12 +370,33 @@ footer {
 	column-count:         4;
 	column-gap:           0px;
 }
+#gallery > div {
+	position: relative;
+	overflow: hidden;
+}
 #gallery img,
 #gallery video {
 	width: 100%;
 	height: auto;
 }
+#gallery > div > div {
+    position:absolute;
+    visibility: hidden;
+    bottom: 0%;
+    width: 100%;
+    color: #fff;
+    background-image: linear-gradient( rgba(0,0,0,0%) 0%, rgba(0,0,0,.75) 75% );
+    /*font-family: 'Amalfi Coast', serif;*/
+    padding: 1em;
+    line-height: 1.9em;
+}
+#gallery > div:hover > div {
+	visibility: visible;
+}
 
+.copy svg {
+	padding-left: .25em;
+}
 .copied {
 	position: relative;
 }
@@ -422,6 +437,7 @@ footer img {
 	}
 	h1 {
 		padding-right: 0;
+		padding-top: 5rem;
 		line-height: 2em;
 		font-size: 2.25em;
 	}
@@ -469,6 +485,15 @@ footer img {
 	#registry .container > div,
 	#registry a {
 		width: 100%;
+	}
+
+	#gallery {
+		webkit-column-count: 2;
+		-moz-column-count: 2;
+		column-count: 2;
+	}
+	#gallery > div:hover > div {
+		visibility: hidden;
 	}
 	footer img {
 		width: 100%;
