@@ -174,7 +174,7 @@ var gallery_photos = [
         text: "Kitchen's closed"
     },
     {
-        url: 'symphony2.jpg',
+        url: 'symphony2.JPG',
         text: "Real mature"
     },
     {
