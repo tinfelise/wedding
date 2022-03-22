@@ -53,53 +53,133 @@ $('nav').on("click", function () {
 
 var gallery_photos = [
     {
-        url: '1date.jpeg',
-        text: 'Our first date!'
-    },
-    {
         url: '2pic.jpeg',
         text: 'First picture together'
     },
     {
         url: '3dinnerout.jpeg',
-        text: ''
+        text: 'First dinner out, 6&nbsp;months&nbsp;in'
     },
     {
         url: '4nightaway.jpeg',
-        text: ''
+        text: 'First night away'
     },
     {
         url: '5firsttrip.jpeg',
-        text: ''
+        text: 'First weekend trip'
     },
     {
         url: '6firstskate.jpeg',
-        text: ''
+        text: 'California dreaming'
     },
     {
         url: '7ski.jpeg',
-        text: ''
+        text: 'First ski trip'
     },
     {
         url: 'surf.jpeg',
-        text: ''
+        text: 'She was better...'
     },
     {
         url: 'vaccine.jpeg',
-        text: ''
+        text: 'Vaccinated at&nbsp;last!'
     },
     {
         url: 'concert.jpeg',
-        text: ''
+        text: 'First concert'
     },
     {
         url: 'symphony.jpeg',
-        text: ''
+        text: 'Dolled up for the&nbsp;symphony'
+    },
+    // {
+    //     url: '8movingintogether.mp4',
+    //     text: 'Moving in together',
+    //     type: 'video'
+    // },
+    {
+        url: 'goldroom.jpeg',
+        text: 'Got COVID. Worth&nbsp;it.'
     },
     {
-        url: '8movingintogether.mp4',
-        text: '',
-        type: 'video'
+        url: 'halloween.jpeg',
+        text: 'Anyone see White&nbsp;Lotus?'
+    },
+    {
+        url: 'firsthike.jpeg',
+        text: 'Out with the pup'
+    },
+    {
+        url: 'game.jpeg',
+        text: 'First football game. We&nbsp;lost.'
+    },
+    {
+        url: 'pointreyes.jpeg',
+        text: 'Point Reyes morning'
+    },
+    {
+        url: 'joshwedding.jpeg',
+        text: 'Buttoning buttons'
+    },
+    {
+        url: 'michigan.jpeg',
+        text: 'Go Blue!'
+    },
+    {
+        url: 'niece.jpeg',
+        text: 'Tyler gets a niece!'
+    },
+    {
+        url: 'donut.jpeg',
+        text: 'No donuts for peanuts'
+    },
+    {
+        url: 'revel.jpeg',
+        text: 'Fort Funston FTW'
+    },
+    // {
+    //     url: 'monster.jpeg',
+    //     text: 'Created a monster'
+    // },
+    {
+        url: 'bob.jpeg',
+        text: 'Birthdays with Bob'
+    },
+    {
+        url: 'tahoe.jpeg',
+        text: 'Tahoe in the "winter"'
+    },
+    {
+        url: 'engaged.jpeg',
+        text: 'Got engaged. NBD.'
+    },
+    {
+        url: 'carmel.jpeg',
+        text: 'Weekend in Carmel'
+    },
+    {
+        url: 'bigsky.jpeg',
+        text: 'Big Sky crew'
+    },
+    {
+        url: 'mendocino.jpeg',
+        text: 'Mendocino on horseback'
+    },
+    {
+        url: 'drivein.jpeg',
+        text: 'Drive-in movie'
+    },
+    {
+        url: 'lazybear.jpeg',
+        text: "Kitchen's closed"
+    },
+    {
+        url: 'symphony2.jpg',
+        text: "Real mature"
+    },
+    {
+        url: 'backseat.jpeg',
+        text: "Post-hike snoozes"
     }
 ];
 
