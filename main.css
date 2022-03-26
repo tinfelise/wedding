@@ -98,6 +98,11 @@ header {
 	position: fixed;
 	width: 100%;
 	z-index: 1;
+	background-image: url(./images/WineStain.png);
+	background-size: 4rem;
+	background-repeat: no-repeat;
+	background-position-x: -10px;
+	background-position-y: center;
 }
 header.filledHeader {
 	background-color: #fff;
