@@ -122,6 +122,10 @@ var gallery_photos = [
         text: 'Buttoning buttons'
     },
     {
+        url: 'proposal.jpg',
+        text: '"Saw it coming"'
+    },
+    {
         url: 'michigan.jpeg',
         text: 'Go Blue!'
     },
@@ -162,8 +166,12 @@ var gallery_photos = [
         text: 'Big Sky crew'
     },
     {
-        url: 'mendocino.jpeg',
+        url: 'horses.jpeg',
         text: 'Mendocino on horseback'
+    },
+    {
+        url: 'mendocino.jpeg',
+        text: 'Mendocino on cliffs'
     },
     {
         url: 'drivein.jpeg',
@@ -180,6 +188,10 @@ var gallery_photos = [
     {
         url: 'backseat.jpeg',
         text: "Post-hike snoozes"
+    },
+    {
+        url: 'proposal_yes.jpg',
+        text: 'She said yes, Artie!'
     }
 ];
 
