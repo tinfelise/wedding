@@ -7,7 +7,7 @@ $(window).scroll( function () {
 	var bottom = position + height;
 	var pageBottom = $(document).height();
 
-	// Nav bar positioning
+	// Nav bar position highlighting
     $('section').each(function() {
     	var id = $(this).attr('id');
         if (offsetPosition > $(this).offset().top && offsetPosition <= $(this).offset().top + $(this).height() ){ 
@@ -23,7 +23,7 @@ $(window).scroll( function () {
 	};
 
     // Header fill state
-    if (position > header) {
+    if (position > 0) {
         $("header").addClass("filledHeader");
     }
     else {
