@@ -177,6 +177,7 @@ h1 {
 	text-align: right;
     padding-top: 5rem;
     padding-right: 1rem;
+    text-shadow: 0 0 1rem #fff;
 }
 h2 {
 	font-size:1.5em;
@@ -532,7 +533,8 @@ footer img {
 @media only screen and (max-width: 600px) {
 	h1 {
 		font-size: 2em;
-		padding-top: 5rem;
+		padding-top: 6rem;
+		line-height: 2em;
 	}
 }
 
