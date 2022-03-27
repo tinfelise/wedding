@@ -448,12 +448,11 @@ footer img {
     	box-shadow:none;
     	border-radius:0;
 	}
+	
 	#header span {
 		font-size: .75em;
 	}
-	nav a {
-		margin-left: .35rem;
-	}
+
 	h1 {
 		padding-right: 0;
 		padding-top: 5rem;
