@@ -412,9 +412,11 @@ footer {
 	top: max(2em, env(safe-area-inset-top));
 	right: max(2em, env(safe-area-inset-right));
 	display: none;
+	filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 }
 #gallery > div svg:hover {
 	cursor: pointer;
+	color: rgba(234,185,96,1);
 }
 #gallery > div:hover > div {
 	visibility: visible;
