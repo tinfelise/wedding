@@ -412,7 +412,7 @@ footer {
 	top: max(2em, env(safe-area-inset-top));
 	right: max(2em, env(safe-area-inset-right));
 	display: none;
-	filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+	filter: drop-shadow(0 0 .5rem rgb(0 0 0 / 0.4));
 }
 #gallery > div svg:hover {
 	cursor: pointer;
