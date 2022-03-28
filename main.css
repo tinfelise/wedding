@@ -184,6 +184,7 @@ h2 {
 }
 h3 {
 	font-size:1.25em;
+	margin-bottom: 0;
 }
 
 header img {
@@ -238,9 +239,6 @@ nav a.current {
 	width: 100%;
 	margin-top: 0;
 }
-#details h3 {
-	margin-bottom: 0
-}
 #details span {
 	display: block;
 	margin-bottom: 1rem;
@@ -287,6 +285,9 @@ nav a.current {
     padding: 1em;
     width: 3rem;
     background-color: transparent	;
+}
+.modal h3 {
+	line-height: 2.5em;
 }
 #attire img {
 	height:  3rem;
