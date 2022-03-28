@@ -119,11 +119,11 @@ var gallery_photos = [
     },
     {
         url: 'joshwedding.jpeg',
-        text: 'Buttoning buttons'
+        text: 'Buttoning buttons is hard'
     },
     {
         url: 'proposal.jpg',
-        text: '"Saw it coming"'
+        text: '\"Saw it coming\"'
     },
     {
         url: 'michigan.jpeg',
