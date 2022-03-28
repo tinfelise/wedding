@@ -406,8 +406,55 @@ footer {
     padding: 1em;
     line-height: 1.9em;
 }
+#gallery > div svg {
+	color: #fff;
+	position: fixed;
+	top: max(2em, env(safe-area-inset-top));
+	right: max(2em, env(safe-area-inset-right));
+	display: none;
+}
+#gallery > div svg:hover {
+	cursor: pointer;
+}
 #gallery > div:hover > div {
 	visibility: visible;
+}
+
+#gallery div.fullscreen {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	text-align: center;
+	background-color: rgba(0,0,0,.9);
+	z-index: 2;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+/*.icon::before {
+	display: inline-block;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+}
+#gallery div.fullscreen:before {
+	font: var(--fa-font-solid);
+	content: "\f00d";
+	color: #fff;
+	position: fixed;
+	top: max(2em, env(safe-area-inset-top));
+	right: max(2em, env(safe-area-inset-right));
+}*/
+#gallery div.fullscreen svg {
+	display: block;
+}
+#gallery div.fullscreen img {
+	display: none;
+}
+#gallery div.fullscreen div {
+	visibility: visible;
+	padding-bottom: 2em;
 }
 
 .copy svg {
@@ -526,6 +573,10 @@ footer img {
 	}
 	#gallery > div:hover > div {
 		visibility: hidden;
+	}
+	#gallery div.fullscreen div {
+		visibility: visible;
+		padding-bottom: max(2em, env(safe-area-inset-bottom))
 	}
 	footer img {
 		width: 100%;

@@ -212,11 +212,11 @@ function create_gallery (photos) {
         } else {
             var html = '<img src="' + url + '" alt="' + photo.text + '">';
         };
-        html = '<div>' + html;
+        html = '<div onclick="$(this).toggleClass(\'fullscreen\')" style="background-image: url(' + url + ')">' + html;
         if (photo.text) {
             html = html + '<div>' + photo.text + '</div>';
         };
-        html = html + '</div>'
+        html = html + '<i class="fa-solid fa-xmark"></i>' + '</div>'
         $('#gallery').append(html);
     };
 };
