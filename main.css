@@ -289,12 +289,12 @@ nav a.current {
 .modal h3 {
 	line-height: 2.5em;
 }
-#attire img {
+.modal img {
 	height:  3rem;
 	display: block;
 	margin: 0 auto 1em;
 }
-#attire div * {
+.modal div * {
 	margin: 0;
 }
 
@@ -551,7 +551,7 @@ footer img {
 		padding-right: 0;
 	}
 
-	#attire {
+	.modal {
 		flex-wrap: wrap;
 		text-align: center;
 	}

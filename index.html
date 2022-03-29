@@ -57,6 +57,10 @@
 						What should I wear?
 						<img src='images/bowtie.png' alt=''>
 					</a>
+					<a onclick="$('#transportation').toggleClass('show');">
+						How do I get there?
+						<img src='images/bus.png' alt=''>
+					</a>
 				</div>
 				<div>
 					<h3>The Wind Down</h3>
@@ -173,6 +177,16 @@
 		<div>
 			<h3>Black Tie Extremely&nbsp;Optional</h3>
 			<p>No shirt, no dancing shoes, no service.</p>
+		</div>
+	</div>
+	<div id="transportation" class='modal'>
+		<button class='close' onclick="$('#transportation').toggleClass('show');">
+			<i class="fa-solid fa-xmark"></i>
+		</button>
+		<img src='images/bus.png' alt=''>
+		<div>
+			<h3>Get on the bus!</h3>
+			<p>Shuttles will be provide to and from the wedding at both Mount View Hotel and UpValley Inn in Calistoga, as well as one location in&nbsp;Angwin. As Farmstead is also a working restuarant, no parking is available for wedding guests&nbsp;onsite.</p>
 		</div>
 	</div>
 	<!-- Libraries -->
