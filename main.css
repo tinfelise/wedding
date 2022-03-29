@@ -531,6 +531,8 @@ footer img {
 	}
 	.modal.show {
 		bottom: 0%;
+		transform: initial;
+		left: 0;
 	}
 
 	.circle {
