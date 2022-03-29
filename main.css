@@ -265,8 +265,8 @@ nav a.current {
 .modal {
 	position: fixed;
 	left: 50%;
-    transform: translate(-50%, 0);
-    bottom: -100%;
+	transform: translate(-50%, 50%);
+	bottom: -100%;
 	width: 100%;
 	max-width: 600px;
 	margin: 0 auto !important;
