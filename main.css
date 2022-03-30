@@ -518,7 +518,7 @@ footer img {
 	}
 
 	.modal {
-		border-radius: 0;
+		border-radius: 2rem 2rem 0 0;
 	}
 	.modal.show {
 		bottom: 0%;
