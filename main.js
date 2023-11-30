@@ -80,10 +80,10 @@ var gallery_photos = [
         url: 'surf.jpeg',
         text: 'She was better...'
     },
-    {
-        url: 'vaccine.jpeg',
-        text: 'Vaccinated at&nbsp;last!'
-    },
+    // {
+    //     url: 'vaccine.jpeg',
+    //     text: 'Vaccinated at&nbsp;last!'
+    // },
     {
         url: 'concert.jpeg',
         text: 'First concert'
@@ -129,10 +129,10 @@ var gallery_photos = [
         url: 'michigan.jpeg',
         text: 'Go Blue!'
     },
-    {
-        url: 'niece.jpeg',
-        text: 'Tyler gets a niece!'
-    },
+    // {
+    //     url: 'niece.jpeg',
+    //     text: 'Tyler gets a niece!'
+    // },
     {
         url: 'donut.jpeg',
         text: 'No donuts for peanuts'
